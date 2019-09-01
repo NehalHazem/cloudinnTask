@@ -1,0 +1,29 @@
+
+
+
+1- Given a task in the project you are working on, it’s your first time implementing a feature like this so you search the internet for 
+   a solution and you find two open source libraries which could help you implement this task. How would you choose which one to use? 
+
+   I’d choose based on how popular the library is as the more popular it is the more documentations for it and also how
+   often it is updated. 
+
+
+ 
+2- If there’s one improvement you can add to your favorite programming language or framework, what would that be? 
+
+   I’d make it optional in angular to choose to code using JavaScript or typescript. 
+
+
+ 
+3- In a complex financial application, what would be the ideal way to minimize bugs introduced to the system by your own code? 
+     
+   - Avoid complicated code, the more complicated the code the more likely there ‘ll be bugs. 
+   - Using unit testing. 
+   - Reread the code to make sure there is nothing missing. 
+   - Take compiler warnings as serious as errors. 
+
+
+ 
+4- This is the most important question of all, Star Wars or Star Trek? 
+
+   Sorry can’t tell, I have not watched either. 

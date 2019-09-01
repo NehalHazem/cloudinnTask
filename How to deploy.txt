@@ -1,0 +1,10 @@
+
+- Either download or clone the application.
+
+- Open the app and run npm install.
+
+- Run the application locally by ng serve -o
+
+- Run Jasmine test by running ng test.
+
+- For deploying the app to the server run ng build --prod and then copy everything inside the dist folder and past it on the server.

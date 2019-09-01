@@ -1,0 +1,60 @@
+<div class="uk-container uk-container-large uk-margin-large-bottom">
+
+
+  <!-- On Submitting the form it trigger the onSearch function -->
+  <form [formGroup]="myForm" (ngSubmit)="onSearch()">
+    <div class="uk-margin-medium-top uk-margin-medium-bottom">
+      <input class="uk-input uk-form-width-large uk-align-center uk-form-large" formControlName="search_value" type="text" placeholder="Search...">
+      <!-- <button class="uk-button uk-button-default" type="submit"><span uk-icon="icon: search; ratio: 1"></span></button> -->
+    </div>
+  </form>
+
+  <!-- No Data Message that 'll appear when their is an error -->
+  <div class="uk-container uk-container-small">
+    <div *ngIf="noDataFound">
+      <div class="uk-child-width-1@s uk-margin-auto" uk-grid>
+        <div class="uk-card uk-card-default uk-card-small uk-card-body uk-align-center">
+          <h2 class="uk-text-center uk-card-title">No Data Found!</h2>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Drop & Drag By Ty -->
+    <!-- the Cards the data 'll be dispalyed in after looping throu the data -->
+    <div class="uk-child-width-1@s" *ngIf="!noDataFound">
+        <div  *ngFor="let data of dataArr; let i = index">
+          <div class="card uk-card uk-card-default uk-card-small uk-card-body uk-margin-medium-bottom" draggable="true"
+              (dragstart)="dragStart($event)" (dragover)="dragOver($event)" (dragleave)="dragLeave($event)" (drop)="drop($event)">
+              <h3 class="uk-card-title">{{data.name}}</h3>
+              <div class="uk-margin-medium-left">
+                <p>Height: <span>{{data.height}}</span></p>
+                <p>Homeworld: {{data.homeworld}}</p>
+                <p>URL: {{data.url}}</p>
+              </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Drop & Drag By UIkit -->  <!-- plz comment the upove and uncomment this div to run this way & you don't need to do anything in ts -->
+    <!-- the Cards the data 'll be dispalyed in after looping throu the data -->
+    <!-- <div class="uk-child-width-1-2@s" uk-grid uk-sortable="handle: .uk-card" *ngIf="!noDataFound">
+      <div  *ngFor="let data of dataArr; let i = index">
+        <div class="uk-card uk-card-default uk-card-small uk-card-body">
+            <h3 class="uk-card-title">{{data.name}}</h3>
+            <div class="uk-margin-medium-left">
+              <p>Height: <span>{{data.height}}</span></p>
+              <p>Homeworld: {{data.homeworld}}</p>
+              <p>URL: {{data.url}}</p>
+            </div>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+</div>
+
+
+
+
+
